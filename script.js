@@ -95,7 +95,7 @@ function updateGame() {
     if (!gameRunning) return;
     for (const word of activeWords) {
         const yPos = parseFloat(word.style.top || 0);
-        const speed = 1; // Increase this value for faster words
+        const speed = 10; // Increase this value for faster words
         word.style.top = (yPos + speed) + "px";
 
         if (yPos + word.offsetHeight >= gameContainer.offsetHeight) {
